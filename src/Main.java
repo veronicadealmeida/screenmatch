@@ -1,4 +1,6 @@
+import br.com.alura.screenmatch.calculation.RecommendationFilter;
 import br.com.alura.screenmatch.calculation.TimeCalculator;
+import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Series;
 
@@ -41,6 +43,20 @@ public class Main {
         calculator.add(eOVentoLevou);
 
         System.out.println( "Tempo total para assistir: " + calculator.getTotalTime());
+
+        System.out.println("-----------------------");
+        RecommendationFilter filter = new RecommendationFilter();
+        filter.filter(eOVentoLevou);
+
+        System.out.println(eOVentoLevou.getName() + " " + eOVentoLevou.getRating());
+
+
+        Episode lostEpisodeOne = new Episode();
+        lostEpisodeOne.setNumber(1);
+        lostEpisodeOne.setSeries(lost);
+        lostEpisodeOne.setTotalViews(300);
+        filter.filter(lostEpisodeOne);
+        System.out.println(lost.getName() + " " + lostEpisodeOne.getTotalViews());
 
         System.out.println("-----------------------");
     }

@@ -82,4 +82,8 @@ public class Title {
     public void setTotalRatings(int totalRatings) {
         this.totalRatings = totalRatings;
     }
+
+    public double takeAverage(){
+        return rating;
+    }
 }
