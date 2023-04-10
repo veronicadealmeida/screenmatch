@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.models;
+
 public class Movie {
     private String name; /* atributos */
     private int releaseYear;
@@ -6,7 +8,7 @@ public class Movie {
     private double rating;
     private int totalRatings;
 
-    void showMovieData() {
+    public void showMovieData() {
         System.out.println("******************************************");
 
         System.out.println("Nome do filme: " + name );
@@ -26,7 +28,7 @@ public class Movie {
         this.totalRatings++;
     }
 
-    double AveragedRatings(){
+    public double AveragedRatings(){
         return ( this.rating / this.totalRatings * 100 );
     }
 
